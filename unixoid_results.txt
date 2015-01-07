@@ -46,7 +46,7 @@ Failures:
             got false
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:82:in `block (2 levels) in <top (required)>'
 
-Finished in 0.0047 seconds (files took 0.10958 seconds to load)
+Finished in 0.0047 seconds (files took 0.11662 seconds to load)
 17 examples, 6 failures
 
 Failed examples:
