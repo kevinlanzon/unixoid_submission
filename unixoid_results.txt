@@ -1,4 +1,4 @@
-....F..FFFFFFFFFF
+....F....FFFFFFFF
 
 Failures:
 
@@ -11,21 +11,7 @@ Failures:
        (compared using ==)
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:24:in `block (2 levels) in <top (required)>'
 
-  2) Unixoid test 8a. should have t-vars.count in my/public/files
-     Failure/Error: expect(File.exist?('my/public/files/t-vars.count')).to be true
-       
-       expected true
-            got false
-     # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:36:in `block (2 levels) in <top (required)>'
-
-  3) Unixoid test 8b. should have the count of env vars in my/public/files/t-vars.count
-     Failure/Error: expect(File.read('my/public/files/t-vars.count')).to match(/^Overall count:\s+\d+\s*$/i)
-     Errno::ENOENT:
-       No such file or directory @ rb_sysopen - my/public/files/t-vars.count
-     # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:41:in `read'
-     # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:41:in `block (2 levels) in <top (required)>'
-
-  4) Unixoid test 9. should have rw access for the owner only on my/private/files/t-vars.env
+  2) Unixoid test 9. should have rw access for the owner only on my/private/files/t-vars.env
      Failure/Error: expect(permissions).to eq(0100600) # rw for the user only
        
        expected: 33152
@@ -34,7 +20,7 @@ Failures:
        (compared using ==)
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:47:in `block (2 levels) in <top (required)>'
 
-  5) Unixoid test 10. should only allow the owner to change into my/private/files
+  3) Unixoid test 10. should only allow the owner to change into my/private/files
      Failure/Error: expect(permissions & 0000010).to eq(0)
        
        expected: 0
@@ -43,56 +29,56 @@ Failures:
        (compared using ==)
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:54:in `block (2 levels) in <top (required)>'
 
-  6) Unixoid test 11. should have rw permissions for all users on my/public/files/t-vars.count
-     Failure/Error: t_vars_permissions = File.stat('my/public/files/t-vars.count').mode
-     Errno::ENOENT:
-       No such file or directory @ rb_file_s_stat - my/public/files/t-vars.count
-     # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:59:in `stat'
-     # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:59:in `block (2 levels) in <top (required)>'
+  4) Unixoid test 11. should have rw permissions for all users on my/public/files/t-vars.count
+     Failure/Error: expect(t_vars_permissions & 0666).to eq(0666)
+       
+       expected: 438
+            got: 420
+       
+       (compared using ==)
+     # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:60:in `block (2 levels) in <top (required)>'
 
-  7) Unixoid test 12a. should have text-files-count.txt in my/public/files
+  5) Unixoid test 12a. should have text-files-count.txt in my/public/files
      Failure/Error: expect(File.exist?('my/public/files/text-files-count.txt')).to be true
        
        expected true
             got false
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:64:in `block (2 levels) in <top (required)>'
 
-  8) Unixoid test 12b. should have the count of text files in my/public/files/text-files-count.txt
+  6) Unixoid test 12b. should have the count of text files in my/public/files/text-files-count.txt
      Failure/Error: expect(File.read('my/public/files/text-files-count.txt')).to match(/^\s*\d{2,6}\s*$/)
      Errno::ENOENT:
        No such file or directory @ rb_sysopen - my/public/files/text-files-count.txt
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:68:in `read'
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:68:in `block (2 levels) in <top (required)>'
 
-  9) Unixoid test 13a. should have first-three-env.txt in my/private/files
+  7) Unixoid test 13a. should have first-three-env.txt in my/private/files
      Failure/Error: expect(File.exist?('my/private/files/first-three-env.txt')).to be true
        
        expected true
             got false
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:72:in `block (2 levels) in <top (required)>'
 
-  10) Unixoid test 13b. should have the the first three env vars in my/private/files/first-three-env.txt
+  8) Unixoid test 13b. should have the the first three env vars in my/private/files/first-three-env.txt
      Failure/Error: lines = File.readlines('my/private/files/first-three-env.txt')
      Errno::ENOENT:
        No such file or directory @ rb_sysopen - my/private/files/first-three-env.txt
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:76:in `readlines'
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:76:in `block (2 levels) in <top (required)>'
 
-  11) Unixoid test 14. should have commands.txt in my/private/files
+  9) Unixoid test 14. should have commands.txt in my/private/files
      Failure/Error: expect(File.exist?('my/private/files/commands.txt')).to be true
        
        expected true
             got false
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:82:in `block (2 levels) in <top (required)>'
 
-Finished in 0.0049 seconds (files took 0.11483 seconds to load)
-17 examples, 11 failures
+Finished in 0.00483 seconds (files took 0.10404 seconds to load)
+17 examples, 9 failures
 
 Failed examples:
 
 rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:20 # Unixoid test 5. should have the list of env vars that begin with T in t-vars.env
-rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:35 # Unixoid test 8a. should have t-vars.count in my/public/files
-rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:40 # Unixoid test 8b. should have the count of env vars in my/public/files/t-vars.count
 rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:44 # Unixoid test 9. should have rw access for the owner only on my/private/files/t-vars.env
 rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:50 # Unixoid test 10. should only allow the owner to change into my/private/files
 rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:58 # Unixoid test 11. should have rw permissions for all users on my/public/files/t-vars.count
