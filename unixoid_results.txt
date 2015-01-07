@@ -1,4 +1,4 @@
-....F........F.F.
+....F........F...
 
 Failures:
 
@@ -13,27 +13,18 @@ Failures:
 
   2) Unixoid test 12b. should have the count of text files in my/public/files/text-files-count.txt
      Failure/Error: expect(File.read('my/public/files/text-files-count.txt')).to match(/^\s*\d{2,6}\s*$/)
-       expected "       1\n" to match /^\s*\d{2,6}\s*$/
+       expected "       1\n       1\n" to match /^\s*\d{2,6}\s*$/
        Diff:
-       @@ -1,2 +1,2 @@
+       @@ -1,2 +1,3 @@
        -/^\s*\d{2,6}\s*$/
+       +       1
        +       1
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:68:in `block (2 levels) in <top (required)>'
 
-  3) Unixoid test 13b. should have the the first three env vars in my/private/files/first-three-env.txt
-     Failure/Error: expect(lines.count).to eq(3)
-       
-       expected: 3
-            got: 0
-       
-       (compared using ==)
-     # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:78:in `block (2 levels) in <top (required)>'
-
-Finished in 0.00844 seconds (files took 0.11714 seconds to load)
-17 examples, 3 failures
+Finished in 0.00522 seconds (files took 0.11753 seconds to load)
+17 examples, 2 failures
 
 Failed examples:
 
 rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:20 # Unixoid test 5. should have the list of env vars that begin with T in t-vars.env
 rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:67 # Unixoid test 12b. should have the count of text files in my/public/files/text-files-count.txt
-rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:75 # Unixoid test 13b. should have the the first three env vars in my/private/files/first-three-env.txt
