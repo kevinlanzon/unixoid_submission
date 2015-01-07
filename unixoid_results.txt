@@ -1,4 +1,4 @@
-....F........F.FF
+....F........F.F.
 
 Failures:
 
@@ -29,19 +29,11 @@ Failures:
        (compared using ==)
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:78:in `block (2 levels) in <top (required)>'
 
-  4) Unixoid test 14. should have commands.txt in my/private/files
-     Failure/Error: expect(File.exist?('my/private/files/commands.txt')).to be true
-       
-       expected true
-            got false
-     # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:82:in `block (2 levels) in <top (required)>'
-
-Finished in 0.0052 seconds (files took 0.10639 seconds to load)
-17 examples, 4 failures
+Finished in 0.00844 seconds (files took 0.11714 seconds to load)
+17 examples, 3 failures
 
 Failed examples:
 
 rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:20 # Unixoid test 5. should have the list of env vars that begin with T in t-vars.env
 rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:67 # Unixoid test 12b. should have the count of text files in my/public/files/text-files-count.txt
 rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:75 # Unixoid test 13b. should have the the first three env vars in my/private/files/first-three-env.txt
-rspec /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:81 # Unixoid test 14. should have commands.txt in my/private/files
