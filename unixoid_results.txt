@@ -6,7 +6,7 @@ Failures:
      Failure/Error: expect(lines.map{|l| l[0]}.uniq).to eq(['T'])
        
        expected: ["T"]
-            got: []
+            got: ["L", "T"]
        
        (compared using ==)
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:24:in `block (2 levels) in <top (required)>'
@@ -111,7 +111,7 @@ Failures:
             got false
      # /Users/kevinnichola/.rvm/gems/ruby-2.1.2/gems/unixoid-challenge-0.0.5/challenge_spec.rb:82:in `block (2 levels) in <top (required)>'
 
-Finished in 0.00517 seconds (files took 0.11128 seconds to load)
+Finished in 0.00887 seconds (files took 0.11202 seconds to load)
 17 examples, 13 failures
 
 Failed examples:
